@@ -29,7 +29,7 @@ androidx-compose-hilt-navigation = "1.1.0"
 hilt = "2.51"
 
 # Gradle
-gradle-android = "8.1.1"
+gradle-android = "8.3.1"
 
 [libraries]
 # Kotlin

@@ -11,7 +11,7 @@ test-turbine = "1.1.0"
 test-mockk = "1.13.10"
 
 # AndroidX
-androidx = "1.12.0"
+androidx = "1.13.1"
 androidx-lifecycle-runtime = "2.7.0"
 
 # AndroidXTest

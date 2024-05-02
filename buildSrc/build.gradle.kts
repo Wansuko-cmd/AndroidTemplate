@@ -11,17 +11,17 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("androidApplication") {
-            id = "com.template.application"
-            implementationClass = "plugins.AndroidApplicationPlugin"
+        register("androidComposeApplication") {
+            id = "com.template.android.compose.application"
+            implementationClass = "plugins.android.compose.AndroidComposeApplicationPlugin"
         }
-        register("androidCompose") {
-            id = "com.template.compose"
-            implementationClass = "plugins.AndroidComposePlugin"
+        register("androidComposeLibrary") {
+            id = "com.template.android.compose.library"
+            implementationClass = "plugins.android.compose.AndroidComposeLibraryPlugin"
         }
         register("androidLibrary") {
-            id = "com.template.library"
-            implementationClass = "plugins.AndroidLibraryPlugin"
+            id = "com.template.android.library"
+            implementationClass = "plugins.android.AndroidLibraryPlugin"
         }
         register("daggerHilt") {
             id = "com.template.dagger-hilt"

@@ -1,7 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    id(Plugins.androidApplication)
+    id(Plugins.androidComposeApplication)
     id(Plugins.daggerHilt)
 }
 

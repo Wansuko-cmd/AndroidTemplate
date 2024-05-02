@@ -1,7 +1,9 @@
+@file:Suppress("ConstPropertyName")
+
 object Plugins {
-    const val androidApplication = "com.template.application"
-    const val androidLibrary = "com.template.library"
-    const val androidCompose = "com.template.compose"
+    const val androidComposeApplication = "com.template.android.compose.application"
+    const val androidComposeLibrary = "com.template.android.compose.library"
+    const val androidLibrary = "com.template.android.library"
     const val daggerHilt = "com.template.dagger-hilt"
     const val ktlint = "com.template.ktlint"
 }

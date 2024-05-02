@@ -1,4 +1,4 @@
-package plugins
+package plugins.android
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion

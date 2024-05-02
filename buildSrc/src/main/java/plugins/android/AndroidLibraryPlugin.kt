@@ -1,4 +1,4 @@
-package plugins
+package plugins.android
 
 import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Plugin
@@ -15,12 +15,6 @@ class AndroidLibraryPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureCommonAndroidSetting(this)
-
-                buildTypes {
-                    create("mock") {
-                        signingConfig = signingConfigs.getByName("debug")
-                    }
-                }
             }
         }
     }

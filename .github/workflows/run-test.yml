@@ -3,6 +3,9 @@ name: 'テストを実行'
 on:
   workflow_dispatch:
   push:
+  pull_request:
+    types:
+      - opened
 
 jobs:
   test:

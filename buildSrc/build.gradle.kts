@@ -6,6 +6,7 @@ dependencies {
     implementation(libs.gradle.kotlin)
     implementation(libs.gradle.android)
     implementation(libs.gradle.hilt)
+    implementation(libs.gradle.ksp)
 }
 
 gradlePlugin {

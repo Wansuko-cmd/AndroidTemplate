@@ -31,6 +31,9 @@ hilt = "2.51.1"
 # Gradle
 gradle-android = "8.3.2"
 
+# ksp
+ksp = "1.9.23-1.0.20"
+
 [libraries]
 # Kotlin
 kotlin-coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine" }
@@ -76,6 +79,7 @@ hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", v
 gradle-kotlin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-android = { group = "com.android.tools.build", name = "gradle", version.ref = "gradle-android" }
 gradle-hilt = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
+gradle-ksp = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 
 [bundles]
 test = ["test-truth", "test-junit4", "test-turbine", "test-mockk", "test-kotlin-test"]
@@ -97,3 +101,6 @@ androidx-compose-test = [
     "androidx-compose-test-manifest",
     "androidx-compose-test-uitooling",
 ]
+
+[plugins]
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

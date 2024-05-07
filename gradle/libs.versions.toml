@@ -32,7 +32,7 @@ hilt = "2.51.1"
 gradle-android = "8.3.2"
 
 # ksp
-ksp = "1.9.23-1.0.20"
+ksp = "1.9.24-1.0.20"
 
 [libraries]
 # Kotlin

@@ -1,5 +1,4 @@
 import com.android.build.api.dsl.ApplicationExtension
-import ext.configureCommonAndroidSetting
 import ext.getBundle
 import ext.getLibrary
 import ext.getVersion

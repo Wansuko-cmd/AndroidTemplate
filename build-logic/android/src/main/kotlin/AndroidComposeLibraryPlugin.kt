@@ -1,5 +1,4 @@
 import com.android.build.gradle.LibraryExtension
-import ext.configureCommonAndroidSetting
 import ext.getBundle
 import ext.getLibrary
 import ext.getVersion

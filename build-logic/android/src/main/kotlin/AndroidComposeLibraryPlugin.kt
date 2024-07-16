@@ -1,10 +1,15 @@
 import com.android.build.gradle.LibraryExtension
+import ext.configureCommonAndroidSetting
+import ext.getBundle
+import ext.getLibrary
+import ext.getVersion
+import ext.implementation
+import ext.libs
+import ext.testImplementation
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.getByType
 
 class AndroidComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -14,24 +19,20 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
 
-            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             extensions.configure<LibraryExtension> {
                 configureCommonAndroidSetting(this)
-
                 buildFeatures {
                     compose = true
                 }
                 composeOptions {
-                    kotlinCompilerExtensionVersion = libs.findVersion(
-                        "androidx-compose-compiler",
-                    ).get().toString()
+                    kotlinCompilerExtensionVersion = libs.getVersion("androidx-compose-compiler")
                 }
             }
 
             dependencies {
-                add("implementation", platform(libs.findLibrary("androidx.compose.bom").get()))
-                add("implementation", libs.findBundle("androidx.compose").get())
-                add("testImplementation", libs.findBundle("androidx.compose.test").get())
+                implementation(platform(libs.getLibrary("androidx.compose.bom")))
+                implementation(libs.getBundle("androidx.compose"))
+                testImplementation(libs.getBundle("androidx.compose.test"))
             }
         }
     }

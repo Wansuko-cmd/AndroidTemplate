@@ -1,3 +1,9 @@
+[versions]
+# SDK
+android-compileSdk = "34"
+android-minSdk = "29"
+android-targetSdk = "34"
+
 [plugins]
 # Android
 android-library = { id = "com.template.library", version = "unspecified" }

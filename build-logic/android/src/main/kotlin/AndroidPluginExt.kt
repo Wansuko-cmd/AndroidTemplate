@@ -1,19 +1,18 @@
-package plugins
-
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
+import org.gradle.api.artifacts.VersionCatalogsExtension
+import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-internal fun Project.configureCommonAndroidSetting(
-    commonExtension: CommonExtension<*, *, *, *, *, *>,
-) {
+fun Project.configureCommonAndroidSetting(commonExtension: CommonExtension<*, *, *, *, *, *>) {
+    val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
     commonExtension.apply {
-        compileSdk = 34
+        compileSdk = libs.findVersion("android.compileSdk").get().toString().toInt()
 
         defaultConfig {
-            minSdk = 26
+            minSdk = libs.findVersion("android.minSdk").get().toString().toInt()
         }
 
         compileOptions {

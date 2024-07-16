@@ -1,9 +1,7 @@
-@file:Suppress("UnstableApiUsage")
-
 dependencyResolutionManagement {
     repositories {
-        gradlePluginPortal()
         google()
+        mavenCentral()
         mavenCentral()
     }
     versionCatalogs {
@@ -13,4 +11,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "buildSrc"
+rootProject.name = "build-logic"
+include(":android")
+include(":task")

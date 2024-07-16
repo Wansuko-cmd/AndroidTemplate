@@ -1,5 +1,5 @@
 plugins {
-    id(Plugins.androidLibrary)
+    alias(projects.plugins.android.library)
 }
 
 android {

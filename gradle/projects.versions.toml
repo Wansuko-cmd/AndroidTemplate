@@ -1,0 +1,10 @@
+[plugins]
+# Android
+android-library = { id = "com.template.library", version = "unspecified" }
+android-compose-application = { id = "com.template.compose.application", version = "unspecified" }
+android-compose-library = { id = "com.template.compose.library", version = "unspecified" }
+
+dagger-hilt = { id = "com.template.dagger-hilt", version = "unspecified" }
+
+# Ktlint
+ktlint = { id = "com.template.ktlint", version = "unspecified" }

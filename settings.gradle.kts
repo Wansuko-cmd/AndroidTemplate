@@ -1,6 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         gradlePluginPortal()
         google()
@@ -15,6 +16,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven(url = "https://androidx.dev/storage/compose-compiler/repository/")
+    }
+    versionCatalogs {
+        create("projects") {
+            from(files("./gradle/projects.versions.toml"))
+        }
     }
 }
 

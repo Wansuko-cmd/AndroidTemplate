@@ -1,7 +1,3 @@
-package plugins
-
-import Plugins
-import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.gradle.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -10,20 +6,25 @@ import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.getByType
 
-class AndroidComposePlugin : Plugin<Project> {
+class AndroidComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply(Plugins.androidLibrary)
+                apply("com.android.library")
+                apply("org.jetbrains.kotlin.android")
             }
 
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             extensions.configure<LibraryExtension> {
+                configureCommonAndroidSetting(this)
+
                 buildFeatures {
                     compose = true
                 }
                 composeOptions {
-                    kotlinCompilerExtensionVersion = libs.findVersion("androidx-compose-compiler").get().toString()
+                    kotlinCompilerExtensionVersion = libs.findVersion(
+                        "androidx-compose-compiler",
+                    ).get().toString()
                 }
             }
 

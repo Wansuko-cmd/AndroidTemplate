@@ -1,8 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    id(Plugins.androidApplication)
-    id(Plugins.daggerHilt)
+    alias(projects.plugins.android.compose.application)
+    alias(projects.plugins.dagger.hilt)
 }
 
 android {

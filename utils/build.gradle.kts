@@ -1,6 +1,6 @@
 plugins {
-    id(Plugins.androidLibrary)
-    id(Plugins.daggerHilt)
+    alias(projects.plugins.android.library)
+    alias(projects.plugins.dagger.hilt)
 }
 
 android {

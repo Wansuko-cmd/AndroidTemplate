@@ -1,6 +1,6 @@
 [versions]
 # Kotlin
-kotlin = "1.9.23"
+kotlin = "1.9.24"
 coroutine = "1.8.1"
 datetime = "0.6.0"
 
@@ -12,7 +12,7 @@ test-mockk = "1.13.12"
 
 # AndroidX
 androidx = "1.13.1"
-androidx-lifecycle-runtime = "2.7.0"
+androidx-lifecycle-runtime = "2.8.3"
 
 # AndroidXTest
 androidx-test-junit = "1.2.1"
@@ -20,8 +20,8 @@ androidx-test-espresso = "3.6.1"
 
 # Compose
 androidx-compose-bom = "2024.06.00"
-androidx-compose-compiler = "1.5.13"
-androidx-compose-lifecycle = "2.7.0"
+androidx-compose-compiler = "1.5.14"
+androidx-compose-lifecycle = "2.8.3"
 androidx-compose-navigation = "2.7.7"
 androidx-compose-hilt-navigation = "1.2.0"
 
@@ -30,7 +30,7 @@ hilt = "2.51.1"
 
 # Gradle
 gradle-android = "8.5.1"
-gradle-ksp = "1.9.23-1.0.20"
+gradle-ksp = "1.9.24-1.0.20"
 
 [libraries]
 # Kotlin

@@ -2,7 +2,7 @@
 # Kotlin
 kotlin = "1.9.24"
 coroutine = "1.8.1"
-datetime = "0.6.0"
+datetime = "0.6.2"
 
 # Test
 test-truth = "1.4.4"

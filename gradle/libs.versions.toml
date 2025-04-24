@@ -30,7 +30,7 @@ hilt = "2.55"
 
 # Gradle
 gradle-android = "8.9.0"
-gradle-ksp = "1.9.25-1.0.20"
+gradle-ksp = "2.1.20-2.0.0"
 
 [libraries]
 # Kotlin

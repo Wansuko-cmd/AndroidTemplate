@@ -1,8 +1,8 @@
 [versions]
 # SDK
-android-compileSdk = "34"
+android-compileSdk = "35"
 android-minSdk = "29"
-android-targetSdk = "34"
+android-targetSdk = "35"
 
 [plugins]
 # Android

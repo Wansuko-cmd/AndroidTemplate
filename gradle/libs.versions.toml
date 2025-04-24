@@ -99,3 +99,6 @@ androidx-compose-test = [
     "androidx-compose-test-manifest",
     "androidx-compose-test-uitooling",
 ]
+
+[plugins]
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

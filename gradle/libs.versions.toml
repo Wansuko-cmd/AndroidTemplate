@@ -7,7 +7,7 @@ datetime = "0.6.2"
 # Test
 test-truth = "1.4.4"
 test-junit4 = "4.13.2"
-test-turbine = "1.2.0"
+test-turbine = "1.2.1"
 test-mockk = "1.14.2"
 
 # AndroidX

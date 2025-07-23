@@ -10,5 +10,4 @@ dependencies {
     implementation(projects.utils)
 
     implementation(libs.bundles.androidx)
-    testImplementation(libs.bundles.test)
 }

@@ -4,19 +4,9 @@ kotlin = "2.2.0"
 coroutine = "1.10.2"
 datetime = "0.7.1-0.6.x-compat"
 
-# Test
-test-truth = "1.4.4"
-test-junit4 = "4.13.2"
-test-turbine = "1.2.1"
-test-mockk = "1.14.5"
-
 # AndroidX
 androidx = "1.16.0"
 androidx-lifecycle-runtime = "2.9.2"
-
-# AndroidXTest
-androidx-test-junit = "1.2.1"
-androidx-test-espresso = "3.6.1"
 
 # Compose
 androidx-compose-bom = "2025.07.00"
@@ -40,20 +30,9 @@ ktlint = "13.0.0"
 kotlin-coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine" }
 kotlin-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "datetime" }
 
-# Test
-test-truth = { group = "com.google.truth", name = "truth", version.ref = "test-truth" }
-test-junit4 = { group = "junit", name = "junit", version.ref = "test-junit4" }
-test-turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "test-turbine" }
-test-mockk = { group = "io.mockk", name = "mockk", version.ref = "test-mockk" }
-test-kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
-
 # AndroidX
 androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidx" }
 androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidx-lifecycle-runtime" }
-
-# AndroidXTest
-androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-junit" }
-androidx-test-espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "androidx-test-espresso" }
 
 # Compose
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
@@ -67,11 +46,6 @@ androidx-compose-compiler = { group = "androidx.compose.compiler", name = "compi
 androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidx-compose-navigation" }
 androidx-compose-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidx-compose-hilt-navigation" }
 
-# ComposeTest
-androidx-compose-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-compose-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
-androidx-compose-test-uitooling = { group = "androidx.compose.ui", name = "ui-tooling" }
-
 # Hilt
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
@@ -83,9 +57,7 @@ gradle-hilt = { group = "com.google.dagger", name = "hilt-android-gradle-plugin"
 gradle-ksp = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "gradle-ksp" }
 
 [bundles]
-test = ["test-truth", "test-junit4", "test-turbine", "test-mockk", "test-kotlin-test"]
 androidx = ["androidx-core", "androidx-lifecycle-runtime"]
-androidx-test = ["androidx-test-junit", "androidx-test-espresso"]
 androidx-compose = [
     "androidx-compose-ui",
     "androidx-compose-material3",
@@ -96,11 +68,6 @@ androidx-compose = [
     "androidx-compose-compiler",
     "androidx-compose-navigation",
     "androidx-compose-hilt",
-]
-androidx-compose-test = [
-    "androidx-compose-test-junit4",
-    "androidx-compose-test-manifest",
-    "androidx-compose-test-uitooling",
 ]
 
 [plugins]

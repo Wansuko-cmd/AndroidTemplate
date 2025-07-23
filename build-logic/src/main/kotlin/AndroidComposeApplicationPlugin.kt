@@ -7,7 +7,6 @@ import ext.getPlugin
 import ext.getVersion
 import ext.implementation
 import ext.libs
-import ext.testImplementation
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -37,7 +36,6 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
             dependencies {
                 implementation(platform(libs.getLibrary("androidx.compose.bom")))
                 implementation(libs.getBundle("androidx.compose"))
-                testImplementation(libs.getBundle("androidx.compose.test"))
             }
         }
     }

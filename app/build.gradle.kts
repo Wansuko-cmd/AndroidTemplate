@@ -35,16 +35,9 @@ android {
     }
 }
 
-hilt {
-    enableAggregatingTask = false
-}
-
 dependencies {
     implementation(projects.ui)
     implementation(projects.utils)
 
     implementation(libs.bundles.androidx)
-
-    testImplementation(libs.bundles.test)
-    androidTestImplementation(libs.bundles.androidx.test)
 }

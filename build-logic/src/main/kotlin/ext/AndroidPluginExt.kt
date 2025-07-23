@@ -1,10 +1,12 @@
 import com.android.build.api.dsl.CommonExtension
 import ext.buildLogic
 import ext.getVersion
+import org.gradle.api.Action
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.withType
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.api.plugins.ExtensionAware
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidExtension
 
 fun Project.configureCommonAndroidSetting(commonExtension: CommonExtension<*, *, *, *, *, *>) {
     commonExtension.apply {
@@ -20,9 +22,12 @@ fun Project.configureCommonAndroidSetting(commonExtension: CommonExtension<*, *,
         }
     }
 
-    tasks.withType<KotlinCompile>().configureEach {
-        kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_11.toString()
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_11)
         }
     }
 }
+
+private fun Project.kotlin(configure: Action<KotlinAndroidExtension>): Unit =
+    (this as ExtensionAware).extensions.configure("kotlin", configure)

@@ -30,4 +30,5 @@ class DaggerHiltPlugin : Plugin<Project> {
     }
 }
 
-fun Project.hilt(configure: Action<HiltExtension>): Unit = (this as ExtensionAware).extensions.configure("hilt", configure)
+private fun Project.hilt(configure: Action<HiltExtension>) =
+    (this as ExtensionAware).extensions.configure("hilt", configure)

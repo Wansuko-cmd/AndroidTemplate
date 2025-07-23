@@ -3,7 +3,6 @@ import ext.alias
 import ext.getBundle
 import ext.getLibrary
 import ext.getPlugin
-import ext.getVersion
 import ext.implementation
 import ext.libs
 import ext.testImplementation
@@ -16,8 +15,9 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
+                alias(libs.getPlugin("android.library"))
+                alias(libs.getPlugin("compose.compiler"))
 
                 alias(libs.getPlugin("ktlint"))
             }
@@ -26,9 +26,6 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
                 configureCommonAndroidSetting(this)
                 buildFeatures {
                     compose = true
-                }
-                composeOptions {
-                    kotlinCompilerExtensionVersion = libs.getVersion("androidx-compose-compiler")
                 }
             }
 

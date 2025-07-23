@@ -17,7 +17,6 @@ class DaggerHiltPlugin : Plugin<Project> {
                 apply("com.google.devtools.ksp")
             }
 
-
             hilt {
                 // https://zenn.dev/kaizuka/articles/831dcad9c0594c
                 enableAggregatingTask = false
@@ -31,5 +30,4 @@ class DaggerHiltPlugin : Plugin<Project> {
     }
 }
 
-fun Project.hilt(configure: Action<HiltExtension>): Unit =
-    (this as ExtensionAware).extensions.configure("hilt", configure)
+fun Project.hilt(configure: Action<HiltExtension>): Unit = (this as ExtensionAware).extensions.configure("hilt", configure)

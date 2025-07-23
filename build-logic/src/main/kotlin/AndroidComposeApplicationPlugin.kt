@@ -1,6 +1,8 @@
 import com.android.build.api.dsl.ApplicationExtension
+import ext.alias
 import ext.getBundle
 import ext.getLibrary
+import ext.getPlugin
 import ext.getVersion
 import ext.implementation
 import ext.libs
@@ -16,6 +18,8 @@ class AndroidComposeApplicationPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
+
+                alias(libs.getPlugin("ktlint"))
             }
 
             extensions.configure<ApplicationExtension> {

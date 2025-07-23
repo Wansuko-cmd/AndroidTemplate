@@ -1,6 +1,6 @@
 import com.android.build.api.dsl.CommonExtension
-import ext.getVersion
 import ext.buildLogic
+import ext.getVersion
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.withType

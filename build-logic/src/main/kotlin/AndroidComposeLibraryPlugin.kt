@@ -1,6 +1,8 @@
 import com.android.build.gradle.LibraryExtension
+import ext.alias
 import ext.getBundle
 import ext.getLibrary
+import ext.getPlugin
 import ext.getVersion
 import ext.implementation
 import ext.libs
@@ -16,6 +18,8 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
+
+                alias(libs.getPlugin("ktlint"))
             }
 
             extensions.configure<LibraryExtension> {

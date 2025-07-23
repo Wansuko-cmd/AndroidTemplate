@@ -10,8 +10,8 @@ dependencyResolutionManagement {
         create("libs") {
             from(files("../gradle/libs.versions.toml"))
         }
-        create("projects") {
-            from(files("../gradle/projects.versions.toml"))
+        create("buildLogic") {
+            from(files("../gradle/build-logic.versions.toml"))
         }
     }
 }

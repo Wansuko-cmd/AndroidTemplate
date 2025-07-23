@@ -1,7 +1,7 @@
 plugins {
-    alias(projects.plugins.android.compose.library)
+    alias(buildLogic.plugins.android.compose.library)
     alias(libs.plugins.compose.compiler)
-    alias(projects.plugins.dagger.hilt)
+    alias(buildLogic.plugins.dagger.hilt)
 }
 
 android {

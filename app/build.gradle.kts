@@ -1,9 +1,9 @@
 @file:Suppress("UnstableApiUsage")
 
 plugins {
-    alias(projects.plugins.android.compose.application)
+    alias(buildLogic.plugins.android.compose.application)
     alias(libs.plugins.compose.compiler)
-    alias(projects.plugins.dagger.hilt)
+    alias(buildLogic.plugins.dagger.hilt)
 }
 
 android {

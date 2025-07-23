@@ -18,8 +18,8 @@ dependencyResolutionManagement {
         maven(url = "https://androidx.dev/storage/compose-compiler/repository/")
     }
     versionCatalogs {
-        create("projects") {
-            from(files("./gradle/projects.versions.toml"))
+        create("buildLogic") {
+            from(files("./gradle/build-logic.versions.toml"))
         }
     }
 }

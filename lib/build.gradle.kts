@@ -1,5 +1,5 @@
 plugins {
-    alias(projects.plugins.android.library)
+    alias(buildLogic.plugins.android.library)
 }
 
 android {

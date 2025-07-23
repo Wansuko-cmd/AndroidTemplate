@@ -8,6 +8,7 @@ dependencies {
     implementation(libs.gradle.android)
     implementation(libs.gradle.hilt)
     implementation(libs.gradle.ksp)
+    implementation(libs.gradle.roborazzi)
 }
 
 gradlePlugin {

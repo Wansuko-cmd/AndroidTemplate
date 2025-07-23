@@ -17,5 +17,3 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "build-logic"
-include(":android")
-include(":task")

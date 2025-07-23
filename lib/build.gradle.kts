@@ -7,7 +7,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":utils"))
+    implementation(projects.utils)
 
     implementation(libs.bundles.androidx)
     testImplementation(libs.bundles.test)

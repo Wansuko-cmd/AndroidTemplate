@@ -1,6 +1,7 @@
 @file:Suppress("UnstableApiUsage")
 
 pluginManagement {
+    enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
     includeBuild("build-logic")
     repositories {
         gradlePluginPortal()

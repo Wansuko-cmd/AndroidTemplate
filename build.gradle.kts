@@ -1,16 +1,11 @@
 plugins {
+    alias(libs.plugins.kotlin) apply false
+
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.library) apply false
     alias(libs.plugins.compose.compiler) apply false
 }
 
-task<Delete>("clean") {
-    delete(rootProject.buildFile)
-}
-
-buildscript {
-    dependencies {
-        classpath(libs.gradle.kotlin)
-        classpath(libs.gradle.android)
-        classpath(libs.gradle.hilt)
-        classpath(libs.gradle.ksp)
-    }
+tasks.register<Delete>(name = "clean") {
+    delete(rootProject.layout.buildDirectory)
 }

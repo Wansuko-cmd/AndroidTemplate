@@ -35,6 +35,10 @@ android {
     }
 }
 
+hilt {
+    enableAggregatingTask = false
+}
+
 dependencies {
     implementation(projects.ui)
     implementation(projects.utils)

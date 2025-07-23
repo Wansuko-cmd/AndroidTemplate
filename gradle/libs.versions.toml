@@ -32,6 +32,9 @@ hilt = "2.56.2"
 gradle-android = "8.11.1"
 gradle-ksp = "2.1.21-2.0.2"
 
+# Ktlint
+ktlint = "13.0.0"
+
 [libraries]
 # Kotlin
 kotlin-coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutine" }
@@ -101,4 +104,11 @@ androidx-compose-test = [
 ]
 
 [plugins]
+# Kotlin
+kotlin = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+
+# Android
+android-application = { id = "com.android.application", version.ref = "gradle-android" }
+android-library = { id = "com.android.library", version.ref = "gradle-android" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

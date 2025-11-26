@@ -19,7 +19,7 @@ androidx-compose-hilt-navigation = "1.3.0"
 junit = "4.13.2"
 robolectric = "4.16"
 roborazzi = "1.52.0"
-composable-preview-scanner = "0.7.1"
+composable-preview-scanner = "0.7.2"
 
 # Hilt
 hilt = "2.57.2"

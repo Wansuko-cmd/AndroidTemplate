@@ -27,14 +27,14 @@ for DIR in $TARGET; do
 done
 
 ############################
- ファイル内に書かれたパッケージ名の置換
+# ファイル内に書かれたパッケージ名の置換
 ############################
 TARGET=$(find . -type f | grep -v 'build/' | grep -v '\/\.' | grep -v './setup.sh')
 
 for FILE in $TARGET; do
   echo "$FILE"
-  sed -i -e "s/Template/$APP_NAME/g" "$FILE"
-  sed -i -e "s/com.template/$PACKAGE_NAME/g" "$FILE"
+  sed -i "" "s/KotlinTemplate/$APP_NAME/g" "$FILE"
+  sed -i "" "s/com.template/$PACKAGE_NAME/g" "$FILE"
 done
 
 #############################

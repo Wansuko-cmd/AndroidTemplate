@@ -22,7 +22,7 @@ roborazzi = "1.53.0"
 composable-preview-scanner = "0.8.1"
 
 # Hilt
-hilt = "2.57.2"
+hilt = "2.59.1"
 
 # Gradle
 gradle-android = "8.13.2"

@@ -8,18 +8,14 @@ import org.gradle.api.plugins.ExtensionAware
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidExtension
 
-fun Project.configureCommonAndroidSetting(commonExtension: CommonExtension<*, *, *, *, *, *>) {
+fun Project.configureCommonAndroidSetting(commonExtension: CommonExtension) {
     commonExtension.apply {
         compileSdk = buildLogic.getVersion("android.compileSdk").toInt()
 
-        defaultConfig {
-            minSdk = buildLogic.getVersion("android.minSdk").toInt()
-        }
+        defaultConfig.minSdk = buildLogic.getVersion("android.minSdk").toInt()
 
-        compileOptions {
-            sourceCompatibility = JavaVersion.VERSION_11
-            targetCompatibility = JavaVersion.VERSION_11
-        }
+        compileOptions.sourceCompatibility = JavaVersion.VERSION_11
+        compileOptions.targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlin {

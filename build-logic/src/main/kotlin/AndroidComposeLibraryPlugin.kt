@@ -14,7 +14,6 @@ class AndroidComposeLibraryPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("org.jetbrains.kotlin.android")
                 alias(libs.getPlugin("android.library"))
                 alias(libs.getPlugin("compose.compiler"))
 

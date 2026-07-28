@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 現ブランチからチェックアウト
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: ktlintを実行
         uses: ScaCap/action-ktlint@master

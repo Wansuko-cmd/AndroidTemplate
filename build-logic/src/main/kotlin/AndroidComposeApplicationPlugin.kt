@@ -1,4 +1,7 @@
+@file:OptIn(ExperimentalRoborazziApi::class)
+
 import com.android.build.api.dsl.ApplicationExtension
+import com.github.takahirom.roborazzi.ExperimentalRoborazziApi
 import ext.alias
 import ext.buildLogic
 import ext.getBundle

@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ $# -ne 2 ]; then
   echo "使用方法：./setup.sh [プロジェクト名] [パッケージ名]"
   exit 1
@@ -29,12 +30,11 @@ done
 ############################
 # ファイル内に書かれたパッケージ名の置換
 ############################
-TARGET=$(find . -type f | grep -v 'build/' | grep -v '\/\.' | grep -v './setup.sh')
+TARGET=$(find . -type f | grep -v 'build/' | grep -v '\/\.' | grep -v './setup.sh' | grep -v '\.jar$')
 
 for FILE in $TARGET; do
   echo "$FILE"
-  sed -i "" "s/KotlinTemplate/$APP_NAME/g" "$FILE"
-  sed -i "" "s/com.template/$PACKAGE_NAME/g" "$FILE"
+  sed "s/KotlinTemplate/$APP_NAME/g; s/com.template/$PACKAGE_NAME/g" "$FILE" > "$FILE.tmp" && mv "$FILE.tmp" "$FILE"
 done
 
 #############################

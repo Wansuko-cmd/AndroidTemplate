@@ -6,7 +6,7 @@ datetime = "0.8.0-0.6.x-compat"
 
 # AndroidX
 androidx = "1.19.1"
-androidx-lifecycle-runtime = "2.11.0"
+androidx-lifecycle-runtime = "2.11.1"
 
 # Compose
 androidx-compose-bom = "2026.09.00"

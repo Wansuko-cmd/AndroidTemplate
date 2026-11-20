@@ -11,7 +11,7 @@ androidx-lifecycle-runtime = "2.11.0"
 # Compose
 androidx-compose-bom = "2026.09.00"
 androidx-compose-compiler = "1.5.15"
-androidx-compose-lifecycle = "2.11.0"
+androidx-compose-lifecycle = "2.11.1"
 androidx-compose-navigation = "2.10.2"
 androidx-compose-hilt-navigation = "1.4.0"
 

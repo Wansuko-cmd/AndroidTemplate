@@ -25,7 +25,7 @@ composable-preview-scanner = "0.10.0"
 hilt = "2.60.1"
 
 # Gradle
-gradle-android = "9.5.1"
+gradle-android = "9.5.2"
 gradle-ksp = "2.3.14"
 
 # Ktlint
